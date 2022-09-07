@@ -12,7 +12,16 @@ dotenv.config({ path: __dirname+'/.env' });
 const { POLYGON_MUMBAI_RPC_PROVIDER, POLYGON_RPC_PROVIDER, PRIVATE_KEY, POLYGONSCAN_API_KEY } = process.env;
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.9",
+  solidity: {
+    version: "0.8.9",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 1
+      },
+    }
+  },
+
   // defaultNetwork: "mumbai",
   networks: {
     polygon: {
