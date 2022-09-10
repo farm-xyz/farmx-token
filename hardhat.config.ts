@@ -24,6 +24,13 @@ const config: HardhatUserConfig = {
 
   // defaultNetwork: "mumbai",
   networks: {
+    hardhat: {
+      forking: {
+        url: POLYGON_RPC_PROVIDER as string,
+        blockNumber: 32864450
+      },
+      accounts: [ { privateKey: `0x${PRIVATE_KEY}`, balance: "10000000000000000000000000000000000000000000000000000000000000000" } ],
+    },
     polygon: {
       url: POLYGON_RPC_PROVIDER,
       accounts: [ `0x${PRIVATE_KEY}` ]

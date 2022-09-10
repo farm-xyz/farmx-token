@@ -1,4 +1,4 @@
-// contracts/FarmXToken.sol
+// contracts/FarmXTokenV2.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
@@ -6,7 +6,7 @@ import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20VotesUpg
 import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20CappedUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20BurnableUpgradeable.sol";
 
-contract FarmXToken is ERC20VotesUpgradeable, ERC20CappedUpgradeable, ERC20BurnableUpgradeable {
+contract FarmXTokenV1 is ERC20VotesUpgradeable, ERC20CappedUpgradeable, ERC20BurnableUpgradeable {
 
     string internal constant NAME = "FarmX Token";
     string internal constant SYMBOL = "FARMX";
